@@ -1,0 +1,14 @@
+
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./deployment/dockerfile
+    image: mgbl/react_sandbox:latest
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 8000:3000
+    
